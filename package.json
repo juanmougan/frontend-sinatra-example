@@ -9,5 +9,5 @@
     "deploy": "cp -a ui/build/. public/",
     "heroku-postbuild": "yarn build && yan deploy"
   },
-  "author": "Juan Manuel Mougan",
+  "author": "Juan Manuel Mougan"
 }
