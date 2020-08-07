@@ -5,9 +5,9 @@
     "yarn": "1.3.2"
   },
   "scripts": {
-    "build": "yarn --cwd ui install && yarn --cwd ui build",
-    "deploy": "cp -a ui/build/. public/",
-    "heroku-postbuild": "yarn build && yan deploy"
+    "install": "yarn --cwd ui install &&",
+    "deploy": "cp -a ui/. public/",
+    "heroku-postbuild": "yarn install && yarn deploy"
   },
   "author": "Juan Manuel Mougan"
 }
