@@ -1,1 +1,1 @@
-web: ruby api/api.rb
+web: ruby api.rb
