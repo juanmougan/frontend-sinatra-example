@@ -11,8 +11,8 @@
       fetch('http://localhost:5100/visitors').then(function(response) {
         if (response.ok) {
           response.text().then(function(visitors) {
-          	counter = document.getElementById("counter")
-  	        counter.innerHTML = visitors
+            counter = document.getElementById("counter")
+            counter.innerHTML = visitors
           });
         } else {
           console.log('HTTP response was not ok');
@@ -22,12 +22,12 @@
       });
    //    let response = await fetch(url);
    //    if (response.ok) {
-  	// 	let visitors = await response.text()
-  	// 	counter = document.getElementById("counter")
-  	// 	counter.innerHTML = visitors
-	  // } else {
-  	// 	alert("HTTP-Error: " + response.status)
-	  // }
+    //  let visitors = await response.text()
+    //  counter = document.getElementById("counter")
+    //  counter.innerHTML = visitors
+    // } else {
+    //  alert("HTTP-Error: " + response.status)
+    // }
     </script>
   </body>
 </html>
