@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "UI for this sample project",
   "main": "ui.js",
-  "proxy": "http://localhost:4567",
+  "proxy": "http://localhost:5100",
   "scripts": {
     "serve": "node ui.js",
     "test": "echo \"Error: no test specified\" && exit 1"

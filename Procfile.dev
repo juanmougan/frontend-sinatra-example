@@ -1,2 +1,2 @@
 frontend: yarn --cwd ui serve
-backend: ruby api/api.rb
+backend: ruby api.rb
