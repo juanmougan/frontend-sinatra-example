@@ -6,7 +6,7 @@
   },
   "scripts": {
     "install": "yarn --cwd ui install",
-    "deploy": "cp -a ui/public/*.* public",
+    "deploy": "mkdir public ; cp -a ui/public/*.* public",
     "heroku-postbuild": "yarn install && yarn deploy"
   },
   "author": "Juan Manuel Mougan"
