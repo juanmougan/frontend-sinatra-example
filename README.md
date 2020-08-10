@@ -11,8 +11,10 @@ Mostly following [this tutorial](https://medium.com/@ashwanth1109/deploying-a-ra
 
 2. Make sure the UI starts before the API
 
+```
     heroku buildpacks:add heroku/nodejs --index 1
     heroku buildpacks:add heroku/ruby --index 2
+```
 
 3. Add a `package.json` at the root level
 
