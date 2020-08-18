@@ -1,11 +1,20 @@
 import axios from 'axios';
 
-export default {
-  async getVisitors() {
-    // TODO this can't be localhost hardcoded, depends on the env
-    let res = await axios.get('http://localhost:5100/visitors');
-    console.log('This is what I got');
-    console.log(res);
+// TODO can I build this elsewhere? Like a singleton service (maybe this is too Spring-y)?
+const PROTOCOL = `http`;
+const ENV = `localhost`;
+const PORT = `5100`;
+const BASE_URL = `${PROTOCOL}://${ENV}:${PORT}`;
+const RESOURCE_PATH = `visitors`;
+const BASE_ENDPOINT = `${BASE_URL}/${RESOURCE_PATH}`;
+
+const getCount = async () => {
+  try {
+    const res = await axios.get(BASE_ENDPOINT);
     return res.data;
-  },
+  } catch (e) {
+    console.log(e);
+  }
 };
+
+export default getCount;

@@ -9,9 +9,7 @@
 </template>
 
 <script>
-// TODO use the Service instead
-// import Visitors from "@/services/visitors.js";
-const axios = require("axios");
+import getCount from "@/services/visitors.js";
 
 export default {
   name: "Counter",
@@ -20,16 +18,8 @@ export default {
       visitors: 0,
     };
   },
-  created() {
-    axios
-      .get(`http://localhost:5100/visitors`)
-      .then((response) => {
-        console.log(`Got this: ${response.data}`);
-        this.visitors = response.data;
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+  async created() {
+    this.visitors = await getCount();
   },
 };
 </script>
