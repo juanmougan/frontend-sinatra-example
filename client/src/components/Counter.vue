@@ -1,7 +1,7 @@
 <template>
   <div class="counter">
     <h1>Welcome to frontend-sinatra-example</h1>
-    <p>
+    <p v-if="visitors > 0">
       Visitors so far:
       <strong id="visitors">{{ visitors }}</strong>
     </p>
