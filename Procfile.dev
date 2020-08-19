@@ -1,2 +1,2 @@
-frontend: yarn --cwd client serve
+frontend: yarn --cwd client install && yarn --cwd client serve
 backend: ruby api.rb
