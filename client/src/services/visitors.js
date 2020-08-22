@@ -1,12 +1,9 @@
 import axios from 'axios';
 
-// TODO can I build this elsewhere? Like a singleton service (maybe this is too Spring-y)?
-const PROTOCOL = `http`;
-const ENV = `localhost`;
-const PORT = `5100`;
-const BASE_URL = `${PROTOCOL}://${ENV}:${PORT}`;
+const BASE_URL = process.env.VUE_APP_BASE_URL;
 const RESOURCE_PATH = `visitors`;
 const BASE_ENDPOINT = `${BASE_URL}/${RESOURCE_PATH}`;
+console.log(BASE_ENDPOINT);
 
 const getCount = async () => {
   try {
